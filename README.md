@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# Surpresa 3D – 2 Anos de Namoro 🎉
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma surpresa interativa em 3D criada para celebrar **2 anos de namoro**, desenvolvida com **React + Three.js (React Three Fiber)**.  
+Este projeto apresenta uma cena 3D personalizada com elementos românticos, animações suaves e narrativa visual para expressar carinho e criatividade 
 
-Currently, two official plugins are available:
+##  Sobre
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto simula uma experiência 3D que combina cenários, objetos e animações para criar uma surpresa visual.  
+Inclui elementos como:
+- Mesa 3D com itens personalizados
+- Pizza 3D como elemento central
+- Duas taças e uma garrafa de vinho para celebração
+- Rosa 3D romântica
+- Pratos e talheres 
+- Retrato com imagem especial e animação de aproximação com confetes   
 
-## React Compiler
+##  Como rodar
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clone o repositório  
+git clone https://github.com/jeffersonjuni/surpresa-2-anos.git
 
-## Expanding the ESLint configuration
+2. Entre na pasta do projeto
+Entre na pasta do projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+3. Instale as dependências
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+4. Inicie o modo de desenvolvimento
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+##  Tecnologias usadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- React
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Vite
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Three.js / React Three Fiber
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- GSAP (para animações)
+
+- Typed.js (terminal inicial)
+
+##  Deploy
+
+O projeto está publicado e pode ser acessado em:
+🔗 https://surpresa-2-anos.vercel.app
+
+💡 Observações
+
+Este projeto foi feito como uma surpresa romântica e pode servir de inspiração para experiências visuais interativas com Three.js.
