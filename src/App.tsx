@@ -16,7 +16,7 @@ function App() {
         <Terminal
           onFinish={() => {
             setShowTerminal(false);
-            setMusicStarted(true); // 🎵 começa aqui
+            setMusicStarted(true); 
           }}
         />
       )}

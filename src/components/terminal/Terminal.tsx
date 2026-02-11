@@ -52,22 +52,29 @@ const Terminal = ({ onFinish }: TerminalProps) => {
     return () => clearTimeout(lineTimeout);
   }, [charIndex, lineIndex]);
 
-  // QUALQUER TECLA → fade
+  // QUALQUER INTERAÇÃO → fade (desktop + mobile)
   useEffect(() => {
     if (!isFinished) return;
 
     let hasTriggered = false;
 
-    const handleKeyDown = () => {
+    const triggerFade = () => {
       if (hasTriggered) return;
       hasTriggered = true;
 
       setFadeOut(true);
-      setTimeout(onFinish, 1000); // tempo do fade
+      setTimeout(onFinish, 1000);
     };
 
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    window.addEventListener("keydown", triggerFade);
+    window.addEventListener("click", triggerFade);
+    window.addEventListener("touchstart", triggerFade);
+
+    return () => {
+      window.removeEventListener("keydown", triggerFade);
+      window.removeEventListener("click", triggerFade);
+      window.removeEventListener("touchstart", triggerFade);
+    };
   }, [isFinished, onFinish]);
 
   return (
@@ -83,7 +90,7 @@ const Terminal = ({ onFinish }: TerminalProps) => {
 
         {isFinished && (
           <p className="terminal-hint">
-            Pressione <span>qualquer tecla</span> para continuar
+            <span>Toque na tela ou pressione qualquer tecla</span> para continuar
           </p>
         )}
       </div>
