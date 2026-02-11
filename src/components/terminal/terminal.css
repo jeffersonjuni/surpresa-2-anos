@@ -1,0 +1,49 @@
+.terminal-container {
+  position: fixed;
+  inset: 0;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.terminal-content {
+  width: 90%;
+  max-width: 800px;
+  color: #00ff88;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.terminal-line {
+  white-space: pre-wrap;
+}
+
+.terminal-hint {
+  margin-top: 24px;
+  color: #aaa;
+  font-size: 0.9rem;
+  animation: blink 1.5s infinite;
+}
+
+.terminal-hint span {
+  color: #00ff88;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
