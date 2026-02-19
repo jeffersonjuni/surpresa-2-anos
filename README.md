@@ -47,4 +47,4 @@ O projeto está publicado e pode ser acessado em:
 
 💡 Observações
 
-Este projeto foi feito como uma surpresa romântica e pode servir de inspiração para experiências visuais interativas com Three.js.
+Este projeto foi feito como uma surpresa romântica e pode servir de inspiração para experiências visuais interativas com Three.js. Para quem for utilizar esse projeto é apenas uma base, lembrar de trocar a imagem no retrato, alterar ou manter o cenário/objetos 3Ds, vai de quem for personalizar e adpatar para o seu própio contexto. 
